@@ -1,1 +1,6 @@
-<p>book works!</p>
+<div class="row text-center">
+  <div class="col">{{ book.id }}</div>
+  <div class="col">{{ book.title }}</div>
+  <div class="col">{{ book.author }}</div>
+  <div class="col">{{ book.price | currency : "R$" }}</div>
+</div>
