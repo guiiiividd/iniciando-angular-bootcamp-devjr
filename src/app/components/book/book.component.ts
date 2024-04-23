@@ -7,10 +7,5 @@ import { Book } from '../../Book';
   styleUrl: './book.component.css',
 })
 export class BookComponent {
-  book: Book = {
-    id: 1,
-    title: 'Conceitos Angular',
-    author: 'Guilherme Vidal',
-    price: 100,
-  };
+  book: Book = {} as Book;
 }
