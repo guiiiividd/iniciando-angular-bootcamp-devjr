@@ -7,6 +7,8 @@ import { Book } from '../../Book';
   styleUrl: './books.component.css',
 })
 export class BooksComponent {
+  newBook: Book = {} as Book;
+
   books: Book[] = [
     {
       id: 1,
