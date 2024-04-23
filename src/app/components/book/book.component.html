@@ -3,15 +3,15 @@
   <form action="">
     <div class="mb-3">
       <label for="title" class="form-label">Título</label>
-      <input type="text" class="form-control" id="title" name="title" required>
+      <input type="text" class="form-control" [(ngModel)]="book.title" id="title" name="title" required>
     </div>
     <div class="mb-3">
       <label for="author" class="form-label">Autor</label>
-      <input type="text" class="form-control" id="author" name="author" required>
+      <input type="text" class="form-control" [(ngModel)]="book.author" id="author" name="author" required>
     </div>
     <div class="mb-3">
       <label for="price" class="form-label">Preço</label>
-      <input type="number" class="form-control" id="price" name="price" required>
+      <input type="number" class="form-control" [(ngModel)]="book.price" id="price" name="price" required>
     </div>
     <button type="submit" class="btn btn-primary">Salvar</button>
   </form>
