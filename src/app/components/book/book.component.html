@@ -13,6 +13,6 @@
       <label for="price" class="form-label">Preço</label>
       <input type="number" class="form-control" [(ngModel)]="book.price" id="price" name="price" required>
     </div>
-    <button type="submit" class="btn btn-primary">Salvar</button>
+    <button type="submit" class="btn btn-primary" (click)="save()">Salvar</button>
   </form>
 </div>

@@ -7,7 +7,10 @@ import { Book } from '../../Book';
   styleUrl: './book.component.css',
 })
 export class BookComponent {
-  
   @Input()
   book: Book = {} as Book;
+
+  save() {
+    console.log('Save');
+  }
 }
