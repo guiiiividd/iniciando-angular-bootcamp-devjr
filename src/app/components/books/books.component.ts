@@ -33,6 +33,14 @@ export class BooksComponent {
   saveBook() {
     this.newBook.id = this.books.length + 1;
     this.books.push(this.newBook);
-    this.newBook =  {} as Book;
+    this.newBook = {} as Book;
+  }
+
+  update(book: Book) {
+    console.log('Update book: ' + book.title);
+  }
+
+  remove(book: Book) {
+    console.log('Remove book: ' + book.title);
   }
 }

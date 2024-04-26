@@ -1,23 +1,28 @@
 <app-book [book]="newBook" (saveEmitter)="saveBook()"></app-book>
 
 <div class="container mt-3">
-    <h3>Livros cadastrados</h3>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Título</th>
-                <th>Autor</th>
-                <th>Preço</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let book of books">
-                <td>{{book.id}}</td>
-                <td>{{book.title}}</td>
-                <td>{{book.author}}</td>
-                <td>{{book.price}}</td>
-            </tr>
-        </tbody>
-    </table>
+  <h3>Livros cadastrados</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Preço</th>
+        <th>opções</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <td>{{ book.id }}</td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.price }}</td>
+        <td>
+          <button class="btn btn-success me-2" (click)="update(book)">Alterar</button>
+          <button class="btn btn-danger" (click)="remove(book)">Remover</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
