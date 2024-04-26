@@ -45,7 +45,7 @@ export class BooksComponent {
     this.isUpdating = true;
   }
 
-  remove(book: Book) {
-    console.log('Remove book: ' + book.title);
+  remove(removeBook: Book) {
+    this.books = this.books.filter(b => b != removeBook);
   }
 }
