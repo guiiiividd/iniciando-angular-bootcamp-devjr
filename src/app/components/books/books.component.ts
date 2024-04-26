@@ -7,7 +7,8 @@ import { Book } from '../../Book';
   styleUrl: './books.component.css',
 })
 export class BooksComponent {
-  newBook: Book = {} as Book;
+  book: Book = {} as Book;
+  isUpdating: boolean = false;
 
   books: Book[] = [
     {
@@ -31,13 +32,17 @@ export class BooksComponent {
   ];
 
   saveBook() {
-    this.newBook.id = this.books.length + 1;
-    this.books.push(this.newBook);
-    this.newBook = {} as Book;
+    if (!this.isUpdating) {
+      this.book.id = this.books.length + 1;
+      this.books.push(this.book);
+    }
+
+    this.book = {} as Book;
   }
 
-  update(book: Book) {
-    console.log('Update book: ' + book.title);
+  update(selectedBook: Book) {
+    this.book = selectedBook;
+    this.isUpdating = true;
   }
 
   remove(book: Book) {
